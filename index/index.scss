@@ -1,0 +1,1372 @@
+@import "./color.scss";
+
+@font-face {
+  font-family: "roboto", sans-serif;
+  src: url("./font/Roboto-Regular.woff2");
+  font-weight: 400px;
+}
+
+@mixin mobile() {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  @include mobile() {
+    max-width: 345px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 33px;
+  .menu-mobile {
+    display: none;
+    cursor: pointer;
+    @include mobile() {
+      display: block;
+      font-size: 24px;
+    }
+  }
+  nav {
+    @include mobile() {
+      display: none;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      column-gap: 50px;
+      font-family: "Poppins-regular", sans-serif;
+
+      a:hover {
+        color: #6b1d57;
+        text-decoration: underline;
+      }
+
+      @include mobile() {
+        display: none;
+      }
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #22232b;
+          text-decoration: none;
+          font-size: 14px;
+          position: relative;
+          text-align: center;
+        }
+      }
+      .sign-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 17px;
+        border: 1px solid #6b1d57;
+        padding: 13px 19px 15px 15px;
+        border-radius: 6px;
+        font-family: "Poppins-regular", sans-serif;
+
+        a {
+          color: #22232b;
+          text-decoration: none;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.subnav {
+  display: flex;
+  gap: 42px;
+  padding-top: 52px;
+  @include mobile() {
+    padding-top: 17px;
+    gap: 22.61px;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    gap: 39.41px;
+    @include mobile() {
+      gap: 8px;
+    }
+    img {
+      width: 27.67px;
+    }
+    input {
+      padding: 8.42px;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #000000;
+      font-size: 17px;
+      width: 100%;
+      &::placeholder {
+        color: #22232b;
+        opacity: 1;
+        font-size: 17px;
+        @include mobile() {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .by-time {
+    select {
+      padding: 10px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #f1f1f1;
+      font-size: 17px;
+      font-family: "Poppins-regular", sans-serif;
+    }
+  }
+  .menu-icons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    @include mobile() {
+      display: none;
+    }
+    img {
+      width: 24px;
+    }
+  }
+}
+
+.header3 {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  padding: 29px;
+  @include mobile() {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    padding: 20px 0px 27px 0px;
+    gap: 30px;
+  }
+  .damage {
+    @include mobile() {
+      display: none;
+    }
+    select {
+      padding: 10px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #f1f1f1;
+      font-size: 17px;
+      color: $damage;
+      font-family: "Poppins-regular", sans-serif;
+    }
+  }
+  .star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23.66px;
+    font-family: "Poppins-regular", sans-serif;
+
+    @include mobile() {
+      display: none;
+    }
+    p {
+      color: $textcolor;
+      margin: 0;
+    }
+  }
+  .checkmark {
+    display: flex;
+    justify-content: flex-end;
+    color: $textcolor;
+    gap: 83px;
+    flex-grow: 1;
+    font-family: "Poppins-regular", sans-serif;
+
+    @include mobile() {
+      gap: 36px;
+    }
+    .check-container {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      gap: 15px;
+      font-family: "Poppins-regular", sans-serif;
+      font-size: 16px;
+      @include mobile() {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 13px;
+      }
+    }
+  }
+  .check-container img.checked {
+    content: url("/social-img/Exclusion\ 1.png"); /* Replace with your checked image */
+  }
+
+  .starmobile {
+    display: none;
+    @include mobile() {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      select {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 17px;
+        color: #6c46b9;
+      }
+      > div {
+        display: flex;
+        gap: 18px;
+        img {
+          width: 22px;
+
+          &:first-child {
+            background: #ffffff 0% 0% no-repeat padding-box;
+            box-shadow: 3px 6px 12px #4444441f;
+            opacity: 0.66;
+          }
+        }
+        .mobilemenu {
+          color: #6b1d57;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  background: #f6f8fd;
+  padding: 24px 0;
+  position: relative;
+  .main-wrapper {
+    display: flex;
+    gap: 30px;
+    .infocard {
+      background: $card;
+      width: 283px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      box-shadow: 6px 12px 24px #44444414;
+      border-radius: 6px;
+      max-height: 509px;
+      font-family: "Poppins-regular", sans-serif;
+
+      @include mobile() {
+        display: none;
+      }
+      select {
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 17px;
+        font-family: "Poppins-regular", sans-serif;
+      }
+      .Form2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 21px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 17px;
+        font-family: "Poppins-regular", sans-serif;
+        .Fo{
+          label{
+          padding-right: 17px;
+        }
+        }
+      }
+      .Auction p {
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+        font-size: 17px;
+        font-family: "Poppins-regular", sans-serif;
+      }
+
+      .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 11.3px;
+        button {
+          color: white;
+          background: transparent
+            linear-gradient(259deg, #6b1d57 0%, #33176c 100%) 0% 0% no-repeat
+            padding-box;
+          box-shadow: 0px 8px 8px #43425d40;
+          border-radius: 6px;
+          opacity: 1;
+          padding: 15px;
+          width: 100%;
+          display: flex;
+          gap: 57px;
+          img {
+            display: block;
+          }
+        }
+        a {
+          color: #000000;
+          font-family: "Poppins-regular", sans-serif;
+        }
+      }
+    }
+  }
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 28px;
+    transition: all 0.5s ease-in;
+    @include mobile() {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.abc {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      width: calc(100% - 283px);
+      transition: all 0.5s ease-in;
+      gap: 20px;
+        @include mobile(){
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1px;
+          width: 100%;
+          align-items: unset;
+          flex-direction: unset;
+          justify-content: unset;
+        }
+        .wrp-container{
+          @include mobile() {
+            width: 49%;
+            gap: 15px;
+          }
+
+      
+      .card-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "image date"
+          "image info";
+        column-gap: 20px;
+        @include mobile(){
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .date {
+          grid-area: date;
+
+          width: auto;
+          justify-self: flex-start;
+          padding: 7px;
+        }
+        
+        .car {
+          
+          grid-area: image;
+          position: relative;
+          justify-self: center;
+          @include mobile(){
+            margin-bottom: 12px;
+          }
+        
+          .toy {
+            
+            display: block;
+            width: 345px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border-radius: 0px 0px 10px 10px;
+            @include mobile(){
+              width: 100%;
+              margin: 0;
+            }
+          }
+            .car-box {
+              @include mobile(){
+              position: absolute;
+              }
+            }
+            .car-box2 {
+              @include mobile(){
+              position: absolute;
+              }
+            }
+          }
+          .car-image-name {
+            
+            h2 {
+              @include mobile(){
+              font-size: 12px;
+              }
+            }
+            p {
+              @include mobile(){
+              font-size: 12px;
+              }
+            }
+          }
+          .car-detail {
+            @include mobile(){
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 8px;
+            }
+            .car1 {
+              @include mobile(){
+              font-size: 11px;
+              display: flex;
+              align-items: center;
+              gap: 7px;
+              }
+            }
+          }
+          .location {
+            .para2 {
+              p {
+                @include mobile(){
+                font-size: 11px;
+                }
+              }
+              h2 {
+                @include mobile(){
+                font-size: 10px;
+                }
+              }
+            }
+          }
+          .sold {
+            @include mobile(){
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 8px;
+            }
+            .para-header {
+              @include mobile(){
+                display: flex;
+                align-items: center;
+                gap: 6px;
+              }
+              .sar-para {
+                p {
+                  @include mobile(){
+                  font-size: 9px;
+                  }
+                }
+                h2 {
+                  @include mobile(){
+                  font-size: 11px;
+                  }
+                } 
+                span {
+                  @include mobile(){
+                  font-size: 9px;
+                  color: #8fb946;
+                  }
+                }
+              }
+            }
+          }
+      }
+     }
+     .name-no-sar-parent{
+     .name-no{
+      h2{
+      @include mobile(){
+        font-size: 12px;
+        padding-top: 5px;
+        padding-right: 5px;
+      }
+    }
+     }
+     .beside-name-no{
+      h2{
+        @include mobile(){
+          font-size: 13px;
+        }
+      }
+      span{
+        @include mobile(){
+        font-size: 11px;
+      }
+      }
+      
+    }
+    }
+    }
+  }
+}
+
+.wrp-container {
+  .card-container {
+    background: $card;
+    box-shadow: 6px 12px 24px #44444414;
+    border-radius: 6px;
+    padding: 8px 11px 8px 14px;
+    .grid-container {
+      display: grid;
+      column-gap: 50px;
+    }
+  }
+
+  .date {
+    background: transparent linear-gradient(264deg, #e73054 0%, #b94646 100%) 0%
+      0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-family: "Poppins-regular", sans-serif;
+  }
+  .car {
+    position: relative;
+    .toy {
+      width: 261px;
+      object-fit: cover;
+      border-radius: 0 0 10px 10px;
+      height: 208px;
+      display: block;
+      margin-bottom: 12px;
+
+      @include mobile() {
+        width: 320px;
+      }
+    }
+    .car-box {
+      position: absolute;
+      top: 14px;
+      right: 13px;
+    }
+    .car-box2 {
+      position: absolute;
+      bottom: 9px;
+      right: 9px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 15px #a375ffb5;
+      opacity: 0.9;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  .car-image-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 9.5px;
+    color: #45454d;
+    h2 {
+      font-family: "Poppins-semibold", sans-serif;
+      font-size: 17px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .car-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 8px;
+    font-size: 14px;
+    .car1 {
+      display: flex;
+      align-items: center;
+      gap: 11.71px;
+      padding: 6.5px 0 6.5px 0;
+      font-size: 14px;
+      font-family: "Poppins-semibold", sans-serif;
+    }
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 11.78px;
+    padding-bottom: 10.5px;
+    .para2 {
+      p {
+        color: #989898;
+        font-size: 11px;
+        font-family: "Poppins-regular", sans-serif;
+      }
+      h2 {
+        color: #45454d;
+        font-size: 19px;
+      }
+    }
+  }
+  .sold {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    .para-header {
+      display: flex;
+      align-items: center;
+      gap: 11.2px;
+      .sar-para {
+        p {
+          font-size: 11px;
+          color: #989898;
+          font-family: "Poppins-regular", sans-serif;
+        }
+        h2 {
+          color: #45454d;
+          font-size: 19px;
+          font-family: roboto;
+        }
+        span {
+          font-size: 13px;
+          color: #8fb946;
+        }
+      }
+    }
+  }
+
+  .carbtn {
+    select {
+      text-align: center;
+      width: 100%;
+      background: transparent linear-gradient(263deg, #8fb946 0%, #74b946 100%)
+        0% 0% no-repeat padding-box;
+      border-radius: 3px;
+      opacity: 1;
+      color: #ffffff;
+      padding: 5px 12.5px 7px 12px;
+    }
+  }
+}
+
+.card-wrapper-display-none {
+  display: none;
+}
+
+.number{
+background-color: #f6f8fd;
+.pages-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 51px;
+  padding-bottom: 208px;
+  padding-top: 44px;
+  @include mobile() {
+    padding-bottom: 54px;
+    padding-top: 10px;
+  }
+  .one {
+    a {
+      font: normal normal medium 13px/20px Poppins;
+      color: #000000;
+      padding: 12px 11px;
+      text-decoration: none;
+      &:hover {
+        background: transparent
+          linear-gradient(225deg, #6b1d57 0%, #33176c 100%) 0% 0% no-repeat
+          padding-box;
+        border-radius: 3px;
+        opacity: 1;
+        color: #ffffff;
+      }
+    }
+    @include mobile() {
+      display: none;
+      &:nth-child(-n + 5) {
+        display: block;
+      }
+    }
+  }
+  .two {
+    font-size: 20px;
+    @include mobile() {
+      display: none;
+    }
+  }
+}
+}
+
+.accordion {
+  background: linear-gradient(263deg, #8fb946, #74b946);
+  color: white;
+  cursor: pointer;
+  padding: 0px 0 0 30px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 3px;
+  font-size: 15px;
+  height: 28px;
+  font-family: "Poppins-regular", sans-serif;
+}
+
+.accordion:after {
+  content: url("./images/banner_images/arrow-down-sign-to-navigate.png"); /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin: 3px 23px 0 0;
+  width: 6px;
+  height: 3px;
+  filter: invert(1);
+}
+
+.active {
+  background-image: none;
+  background-color: white;
+  color: #8fb946;
+  border: 1px solid #8fb946;
+  border-radius: 3px;
+}
+.active:after {
+  content: url("./images/banner_images/up-arrow.png"); /*Unicode character for "minus" sign (-)*/
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover {
+  scale: 1;
+  /* background-image: none; */
+  /* background-color: white; */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 17px 8px 0 15px;
+  background-color: transparent;
+  display: none;
+  overflow: hidden;
+  @include mobile(){
+    padding: 0%;
+  }
+}
+
+/* below accordian */
+
+.panel .below-view-bids {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+  padding-top: 12px;
+}
+
+.panel .below-view-bids .dates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-family: "Poppins-regular", sans-serif;
+}
+
+.panel .below-view-bids .dates img {
+  width: 12px;
+  height: 12px;
+}
+
+.panel .below-view-bids .dates p {
+  font-family: "Poppins-medium", sans-serif;
+  font-size: 11px;
+  color: #45454d;
+}
+
+.panel .below-view-bids .name-no-sar-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel .below-view-bids .name-no-sar-parent .name-no {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.panel .below-view-bids .name-no-sar-parent .name-no p {
+  font-family: "Poppins-regular", sans-serif;
+  color: #45454d;
+  font-size: 13px;
+}
+
+.panel .below-view-bids .name-no-sar-parent .name-no h2 {
+  /* font-family: 'Poppins-semibold', sans-serif ;
+  font-size: 14px; */
+  font: normal normal 600 14px "Poppins-semibold";
+  color: #45454d;
+}
+
+.panel .below-view-bids .name-no-sar-parent .beside-name-no {
+  display: flex;
+  align-items: baseline;
+}
+
+.panel .below-view-bids .name-no-sar-parent .beside-name-no h2 {
+  /* font-family: 'Roboto-bold', sans-serif ; */
+  color: #45454d;
+  /* font-size: 17px; */
+  font: normal normal bold 19px/18px "Roboto-bold";
+}
+
+.panel .below-view-bids .name-no-sar-parent .beside-name-no span {
+  /* font-family: 'Roboto-regular', sans-serif ; */
+  color: #8fb946;
+  /* font-size:12px ; */
+  font: normal normal bold 13px "Roboto-bold";
+}
+
+footer {
+  border: 1px solid #e6e6e6;
+  @include mobile() {
+    display: none;
+  }
+}
+
+.footer-container {
+  margin: 0 auto;
+  max-width: 1366px;
+  height: 106px;
+  /* background-color: blue; */
+  padding: 43px 0 50px 253px;
+  display: flex;
+  align-items: center;
+  gap: 57px;
+}
+
+.footer-container .footer-logo {
+  border-right: 1px solid #e2e2e2;
+  padding-right: 36px;
+}
+
+.footer-container .footer-logo #mobile-phone-logo,
+.email-id,
+.footer-container .footer-p .above-product {
+  display: none;
+}
+
+.footer-container .footer-p {
+  border-right: 1px solid #e2e2e2;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 48px;
+  padding-right: 36px;
+  gap: 20px;
+}
+
+.footer-container .footer-p a {
+  font-family: "Poppins-regular", sans-serif;
+  font-size: 9px;
+  color: #22232b;
+  text-decoration: none;
+}
+
+.footer-container .question {
+  border-right: 1px solid #e2e2e2;
+  height: 48px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding-right: 36px;
+}
+
+.footer-container .question p {
+  text-align: center;
+  margin: auto;
+  color: #22232b;
+  font-size: 10px;
+  font-family: "Poppins-regular", sans-serif;
+}
+
+.footer-container .question p a {
+  font-family: "Poppins-semibold", sans-serif;
+}
+
+.footer-container .social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.auction {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: start;
+  padding-left: 10px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.min,
+.max {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  margin: 0 10px;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: #e0e0e0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  margin-top: -7px;
+}
+
+.current-value {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#current-bid {
+  font-weight: bold;
+  color: #000;
+}
+
+.signmobile {
+  display: none;
+  img {
+    display: block;
+  }
+  @include mobile() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 17px;
+    border: 1px solid #6b1d57;
+    padding: 13px 19px 15px 15px;
+    border-radius: 6px;
+  }
+}
+
+.socialmobile {
+  display: none;
+  @include mobile() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 11.6px;
+  }
+  .signmail {
+    @include mobile() {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 17px;
+      border: 1px solid #6b1d57;
+      padding: 12px 9px 11px 10px;
+      border-radius: 6px;
+      .ri-mail-fill {
+        @include mobile() {
+          width: 14px;
+        }
+      }
+    }
+  }
+}
+
+.mobilerule {
+  display: none;
+  @include mobile() {
+    display: flex;
+    align-items: center;
+    gap: 121px;
+    font-size: 10px;
+    padding-bottom: 21px;
+  }
+}
+
+.mobilefilter {
+  display: none;
+  @include mobile() {
+    position: fixed;
+    background: transparent linear-gradient(219deg, #6b1d57 0%, #33176c 100%) 0%
+      0% no-repeat padding-box;
+    box-shadow: 0px 0px 12px #9066e79c;
+    opacity: 1;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 21px 19px 17.29px 19px;
+    bottom: 80px;
+    right: 30px;
+  }
+}
+
+/* Modal background with blur effect */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  backdrop-filter: blur(10px); /* Background blur */
+  display: flex;
+  align-items: flex-end; /* Align modal to the bottom */
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Start with 0 opacity */
+  pointer-events: none;
+  .modal-content {
+    background-color: #fefefe;
+    width: 100%; /* Full width on mobile */
+    max-width: 400px; /* Adjust for smaller screens */
+    border-radius: 20px 20px 0 0; /* Rounded corners at the top */
+    padding: 20px;
+    animation: slide-up 0.4s ease-out;
+    box-shadow: 6px 12px 24px rgba(68, 68, 68, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/* Modal active state */
+.modal.active {
+  opacity: 1; /* Visible when active */
+  pointer-events: all;
+}
+
+/* Modal Content/Box */
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+/* Animation for sliding modal from bottom */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Modal content styling */
+.infocard {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  select {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 17px;
+    font-family: "Poppins-regular", sans-serif;
+  }
+  .Form {
+    display: flex;
+    gap: 21px;
+  }
+  .Auction p {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 17px;
+    font-family: "Poppins-regular", sans-serif;
+    color: #22232b;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 11.3px;
+    button {
+      color: white;
+      background: transparent linear-gradient(259deg, #6b1d57 0%, #33176c 100%)
+        0% 0% no-repeat padding-box;
+      box-shadow: 0px 8px 8px #43425d40;
+      border-radius: 6px;
+      opacity: 1;
+      padding: 15px;
+      width: 100%;
+      display: flex;
+      gap: 88px;
+      img {
+        display: block;
+      }
+    }
+    a {
+      color: #000000;
+      font-family: "Poppins-regular", sans-serif;
+    }
+  }
+}
+
+/* Blur background when modal is active */
+.blur-background {
+  filter: blur(10px);
+}
+
+/* Transition for blur effect */
+.blur-background-transition {
+  transition: filter 0.3s ease-in-out;
+}
+
+// nav link mobile
+
+.navlinkmobile {
+  display: none;
+  @include mobile() {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #f6f8fd;
+    &.chalu {
+      display: block;
+      max-height: 500px;
+    }
+
+    .mobilelink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      padding: 50px;
+      width: 100%;
+      gap: 50px;
+      background-color: #f6f8fd;
+      .navmobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        a {
+          text-align: center;
+          width: 100%;
+          text-decoration: none;
+          font-family: "Poppins-regular", sans-serif;
+          color: #45454d;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+// mobile list menu desktop
+
+// .card-wrappermobile {
+//   display: none;
+//   flex-direction: column;
+//   gap: 20px;
+//   // max-width: 914px;
+//   width: 100%;
+
+//   .card-container-mobile {
+//     display: flex;
+//     background: $card;
+//     box-shadow: 6px 12px 24px #44444414;
+//     border-radius: 6px;
+//     padding: 8px 11px 8px 14px;
+//     align-items: center;
+//     border-radius: 5px;
+
+//     .carmobile {
+//       position: relative;
+//       .car-boxmobile {
+//         position: absolute;
+//         top: 14px;
+//         right: 13px;
+//       }
+//       .car-box2mobile {
+//         position: absolute;
+//         bottom: 9px;
+//         right: 9px;
+//         background: #ffffff 0% 0% no-repeat padding-box;
+//         box-shadow: 0px 0px 15px #a375ffb5;
+//         opacity: 0.9;
+//         padding: 10px;
+//         border-radius: 10px;
+//       }
+
+//       .toymobile {
+//         width: 345px;
+//         object-fit: cover;
+//         border-radius: 0 0 10px 10px;
+//         height: 208px;
+//         display: block;
+//       }
+//     }
+
+//     .rightmobile {
+//       padding-left: 32px;
+//       flex: 1;
+
+//       .datemobile {
+//         background: transparent
+//           linear-gradient(264deg, #e73054 0%, #b94646 100%) 0% 0% no-repeat
+//           padding-box;
+//         border-radius: 3px;
+//         opacity: 1;
+//         color: white;
+//         padding: 5px;
+//         text-align: center;
+//         margin-bottom: 8px;
+//         font-size: 11px;
+//         font-family: "Poppins-regular", sans-serif;
+//         display: inline-block;
+//       }
+
+//       .car-image-namemobile {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         border-bottom: 1px solid #f1f1f1;
+//         padding-bottom: 9.5px;
+//         color: #45454d;
+//         h2 {
+//           font-family: "Poppins-semibold", sans-serif;
+//           font-size: 17px;
+//         }
+//         p {
+//           font-size: 14px;
+//         }
+//       }
+//       .car-detailmobile {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         border-bottom: 1px solid #f1f1f1;
+//         margin-bottom: 8px;
+//         font-size: 14px;
+//         .car1mobile {
+//           display: flex;
+//           align-items: center;
+//           gap: 11.71px;
+//           padding: 6.5px 0 6.5px 0;
+//           font-size: 14px;
+//           font-family: "Poppins-semibold", sans-serif;
+//         }
+//       }
+//       .locationmobile {
+//         display: flex;
+//         align-items: center;
+//         gap: 11.78px;
+//         padding-bottom: 10.5px;
+//         .para2mobile {
+//           p {
+//             color: #989898;
+//             font-size: 11px;
+//             font-family: "Poppins-regular", sans-serif;
+//           }
+//           h2 {
+//             color: #45454d;
+//             font-size: 19px;
+//           }
+//         }
+//       }
+//       .soldmobile {
+//         display: flex;
+//         align-items: center;
+//         padding-bottom: 10px;
+//         justify-content: space-between;
+//         .para-headermobile {
+//           display: flex;
+//           align-items: center;
+//           gap: 11.2px;
+//           .sar-paramobile {
+//             p {
+//               font-size: 11px;
+//               color: #989898;
+//               font-family: "Poppins-regular", sans-serif;
+//             }
+//             h2 {
+//               color: #45454d;
+//               font-size: 19px;
+//               font-family: roboto;
+//             }
+//             span {
+//               font-size: 13px;
+//               color: #8fb946;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

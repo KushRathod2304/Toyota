@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="header container">
+      <div class="menu-mobile">
+        <i class="ri-menu-line" id="menu-icon"></i>
+      </div>
+      <div class="logo">
+        <img src="../img/header-logo.png" alt="" />
+      </div>
+      <nav>
+        <ul class="nav-link">
+          <li>
+            <a href="#">VEHICLES</a>
+          </li>
+          <li>          
+            <a href="#">FAQs</a>
+          </li>
+          <li>
+            <a href="#">CONTACT US</a>
+          </li>
+          <li>
+            <img src="../img/united-arab-emirates (5).png" alt="" />
+          </li>
+          <div class="sign-up">
+            <img src="../img/user (19).png" alt="" />
+            <a href="#">SIGN UP</a>
+          </div>
+        </ul>
+      </nav>
+      <div class="signmobile">
+        <img src="../img/user (19).png" alt="" />
+      </div>
+    </div>
+  </header>
+
+  <!-- nav link mobile -->
+
+  <div class="navlinkmobile" id="mobile-navbar">
+    <ul class="mobilelink">
+      <li class="navmobile">
+        <a href="#">VEHICLES</a>
+      </li>
+      <li class="navmobile">
+        <a href="#">FAQs</a>
+      </li>
+      <li class="navmobile">
+        <a href="#">CONTACT US</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- header 2 -->
+
+  <section class="subnav container">
+    <div class="search-bar">
+      <img src="../img/icons8-search-30.png" alt="" />
+      <input type="search" name="" id="search-bar" placeholder="Toyota Camry 2020" />
+    </div>
+    <div class="by-time">
+      <select>
+        <option value="AL">By Time</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+    <div class="menu-icons">
+      <img src="../img/menu.png" alt="" onclick="removeabcclass()" />
+
+      <img src="../img/list.png" alt="" id="listViewBtn" onclick="addClassToCard()" />
+    </div>
+  </section>
+
+  <!-- header -3  -->
+
+  <section class="header3 container">
+    <div class="damage">
+      <select>
+        <option value="AL">Damage type</option>
+        <option value="WY">Damage</option>
+      </select>
+    </div>
+    <div class="star">
+
+      <img src="/car-img/star.png" class="custom-checkbox" alt="Live Auctions" onclick="togglestar(this)" />
+      <p>Show Favorites</p>
+    </div>
+    <div class="checkmark">
+      <div class="check-container">
+        <img src="/img/Rectangle 2254.png" class="custom-checkbox" alt="Live Auctions" onclick="toggleCheckbox(this)" />
+
+        <label for="">Live Auctions</label>
+      </div>
+
+      <div class="check-container">
+        <img src="/img/Rectangle 2254.png" class="custom-checkbox" alt="Live Auctions" onclick="toggleCheckbox(this)" />
+
+        <label for="">Coming soon</label>
+      </div>
+
+      <div class="check-container">
+        <img src="/img/Rectangle 2254.png" class="custom-checkbox" alt="Live Auctions" onclick="toggleCheckbox(this)" />
+
+        <label for="">Ended Auctions</label>
+      </div>
+    </div>
+    <div class="starmobile">
+      <select>
+        <option value="AL">Damage type</option>
+        <option value="WY">Damage</option>
+      </select>
+      <div>
+        <img src="../img/star.png" alt="" onclick="togglestar(this)" />
+        <img src="../img/menu.png" onclick="addClassToCard()" id="gridViewBtn" />
+        <img src="../img/list.png" onclick="removeabcclass()" id="listViewBtn" />
+      </div>
+    </div>
+  </section>
+
+  <!-- info card -->
+
+  <section class="main">
+    <div class="main-wrapper container">
+      <div class="infocard">
+        <select>
+          <option value="AL">Make</option>
+          <option value="WY">Toyota</option>
+        </select>
+        <select>
+          <option value="AL">Model</option>
+          <option value="WY">Toyota</option>
+        </select>
+        <select>
+          <option value="AL">City</option>
+          <option value="WY">Mumbai</option>
+        </select>
+        <div class="Form2">
+        <div class="Form">
+          <label for="fromDate">From</label>
+          <input type="text" id="fromDate" name="fromDate">
+        </div>
+        <div class="Fo">
+          <label for="toDate">To</label>  
+          <input type="text" id="toDate" name="toDate">
+        </div>
+        </div>
+        
+         
+       
+        <div class="Auction">
+          <p>Auction ID</p>
+        </div>
+
+        <div class="auction">
+          <p class="label">Current Bid</p>
+
+          <input type="text" class="js-range-slider" name="my_range" value="" />
+        </div>
+
+        <div class="btn">
+          <button><img src="../img/search (9).png" alt="" />SEARCH</button>
+          <a href="#">RESET</a>
+        </div>
+      </div>
+
+      <!-- car card -->
+      <div class="card-wrapper">
+        <!-- card 1 -->
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/2019-Toyota-Camry-Driving-on-Bridge.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar(14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/2019-toyota-camry-ascent-sports-hybrid-sedan-white-1001x565-(1).png"
+                alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/toyota_Camry-Hybrid_2009_image-08-1024.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/Teaser_alt.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/01-2018-Toyota-Camry-Hybrid-quick-review.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 6 -->
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/2019-Toyota-Camry-Driving-on-Bridge.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 7 -->
+
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/424x-.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 8 -->
+
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/2019-Toyota-Camry-Driving-on-Bridge.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 9 -->
+
+        <div class="wrp-container">
+          <div class="card-container">
+            <div class="date">
+              <p>Thursday 12 Dec 2019 - 15:10</p>
+            </div>
+            <div class="car">
+              <img class="toy" src="../car-img/2019-Toyota-Camry-Driving-on-Bridge.png" alt="" />
+              <div class="car-box">
+                <img src="/img/star.png" alt=" " />
+              </div>
+              <div class="car-box2">
+                <img src="/img/law (1).png" alt="law-img" />
+              </div>
+            </div>
+            <div class="mobile">
+              <div class="list-info">
+                <div class="car-image-name">
+                  <h2>Toyota Camry SE</h2>
+                  <p>2019</p>
+                </div>
+                <div class="car-detail">
+                  <div class="car1">
+                    <img src="../img/overturned-vehicle.png" alt="" />
+                    <p>Accident</p>
+                  </div>
+                  <div class="car1">
+                    <img src="../img/visible.png" alt="" />
+                    <p>7,732 Views</p>
+                  </div>
+                </div>
+
+                <div class="location">
+                  <div class="pin-img">
+                    <img src="../img/pin (3).png" alt="pin-img" />
+                  </div>
+                  <div class="para2">
+                    <p>Location</p>
+                    <h2>Riyadh Yard, Saudi Arabia</h2>
+                  </div>
+                </div>
+
+                <div class="sold">
+                  <div class="para-header">
+                    <img src="/car-img/law (1).png" alt="" />
+                    <div class="sar-para">
+                      <p>Sold for</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                  <div class="para-header">
+                    <img src="../img/money (4).png" alt="" />
+                    <div class="sar-para">
+                      <p>Buy Now</p>
+                      <h2>23,911<span>SAR</span></h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="acc-class">
+                  <button class="accordion">View 3 Bids</button>
+                  <div class="panel">
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="below-view-bids">
+                      <div class="dates">
+                        <img src="/img/calendar (14).png" alt="calendar" />
+                        <p>10 Dec 2019 - 20:05</p>
+                      </div>
+                      <div class="name-no-sar-parent">
+                        <div class="name-no">
+                          <p>1.</p>
+                          <h2>JOVANA MILIC</h2>
+                        </div>
+                        <div class="beside-name-no">
+                          <h2>10,500</h2>
+                          <span>SAR</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <!-- </div> -->
+
+    <!-- mobile filter -->
+
+    <div class="mobilefilter">
+      <div class="filter">
+        <img src="/car-img/filter (4).png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- page list -->
+   <div class="number">
+  <div class="pages-list container">
+    <div class="one">
+      <a href="#">1</a>
+    </div>
+    <div class="one">
+      <a href="#">2</a>
+    </div>
+    <div class="one">
+      <a href="#">3</a>
+    </div>
+    <div class="one">
+      <a href="#">4</a>
+    </div>
+    <div class="one">
+      <a href="#">5</a>
+    </div>
+    <div class="one">
+      <a href="#">6</a>
+    </div>
+    <div class="one">
+      <a href="#">7</a>
+    </div>
+    <div class="one">
+      <a href="#">8</a>
+    </div>
+    <div class="one">
+      <a href="#">9</a>
+    </div>
+    <div class="one">
+      <a href="#">10</a>
+    </div>
+    <div class="one">
+      <a href="#">11</a>
+    </div>
+    <div class="one">
+      <a href="#">12</a>
+    </div>
+    <div class="two">
+      <i class="ri-arrow-drop-right-line"></i>
+    </div>
+  </div>
+</div>
+  <!-- footer  -->
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img id="desktop-logo" src="/img/header-logo.png" alt="footer-logo" />
+      </div>
+      <div class="footer-p">
+        <a href="#">TERMS & CONDITIONS</a>
+        <a id="privacy-policy" href="#">PRIVACY POLICY</a>
+        <a href="#">FAQS</a>
+        <div class="above-product">
+          <h4 class="product">RASAN</h4>
+          <h4 class="product">PRODUCT</h4>
+        </div>
+      </div>
+      <div class="question">
+        <p id="email">
+          QUESTIONS?
+          <a href="#">SUPPORT@CARMAZAD.COM</a>
+        </p>
+      </div>
+      <div class="social-media-icons">
+        <a href="#"><img src="/social-img/instagram (2).png" alt="instagram-img" /></a>
+        <a href="#"><img src="/social-img/facebook (6).png" alt="facebook-img" /></a>
+        <a href="#"><img src="/social-img/twitter (5).png" alt="twitter-img" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="linkmobile container">
+    <div class="socialmobile">
+      <img src="/car-img/header-logo.png" alt="" />
+      <img src="/social-img/instagram (2).png" alt="" />
+      <img src="/social-img/facebook (6).png" alt="" />
+      <img src="/social-img/twitter (5).png" alt="" />
+
+      <div class="signmail">
+        <i class="ri-mail-fill"></i>
+      </div>
+    </div>
+    <div class="mobilerule">
+      <p>TERMS & CONDITIONS<span>FAQS</span></p>
+      <p>RASAN PRODUCT</p>
+    </div>
+  </div>
+
+  <!-- Mobile Filter Icon -->
+  <div class="mobilefilter" onclick="toggleFilter()">
+    <div class="filter">
+      <img src="/car-img/filter (4).png" alt="Filter" />
+    </div>
+  </div>
+
+  <!-- Modal Container for the Filter Pop-Up -->
+  <div id="filter-modal" class="modal" onclick="toggleFilter()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="infocard" onclick="event.stopPropagation()">
+        <select>
+          <option value="AL">Make</option>
+          <option value="WY">Toyota</option>
+        </select>
+        <select>
+          <option value="AL">Model</option>
+          <option value="WY">Toyota</option>
+        </select>
+        <select>
+          <option value="AL">City</option>
+          <option value="WY">Mumbai</option>
+        </select>
+        <div class="Form">
+          <select>
+            <option value="AL">From</option>
+            <option value="WY">Damage</option>
+          </select>
+          <select>
+            <option value="AL">To</option>
+            <option value="WY">Damage</option>
+          </select>
+        </div>
+        <div class="Auction">
+          <p>Auction ID</p>
+        </div>
+        <div class="auction">
+          <p class="label">Current Bid</p>
+
+          <input type="text" class="js-range-slider" name="my_range" value="" />
+        </div>
+        <div class="btn">
+          <button><img src="../img/search (9).png" alt="" />SEARCH</button>
+          <a href="#">RESET</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- date picker -->
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+
+
+
+  <!-- cdnj jquery link -->
+  <script src="../jquery.js"></script>
+  <!--Plugin CSS file with desired skin-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
+  <!-- range slider -->
+
+  <link rel="stylesheet" href="../ion-range-slider.css" />
+
+  <!--jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--Plugin JavaScript file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+
+  <script src="./index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script>
+    $(function () {
+      // Apply datepicker to the inputs
+      $("#fromDate").datepicker();
+      $("#toDate").datepicker();
+    });
+  </script>
+</body>
+
+</html>
